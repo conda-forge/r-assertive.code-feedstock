@@ -1,4 +1,4 @@
-{% set version = '0.0-3' %}
+{% set version = "0.0-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/assertive.code_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/assertive.code/assertive.code_{{ version }}.tar.gz
-  sha256: ef80e8d1d683d776a7618e78ddccffca7f72ab4a0fcead90c670bb8f8cb90be2
+  sha256: 2f820474ed20e06f65b284962c87cd1e85220a11cc7fcde09716f0eee5821387
 
 build:
-  merge_build_host: True  # [win]
-  number: 3
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -42,11 +42,9 @@ test:
 about:
   home: https://bitbucket.org/richierocks/assertive.code
   license: GPL (>= 3)
-  summary: A set of predicates and assertions for checking the properties of code. This is mainly
-    for use by other package developers who want to include run-time testing features
-    in their own packages. End-users will usually want to use assertive directly.
+  summary: A set of predicates and assertions for checking the properties of code. This is mainly for use by other package developers who want to include run-time testing features in their own packages. End-users will usually want to use assertive directly.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
