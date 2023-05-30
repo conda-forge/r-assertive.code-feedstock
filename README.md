@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-assertive.cod
 
 Home: https://bitbucket.org/richierocks/assertive.code
 
-Package license: GPL (>= 3)
+Package license: GPL-3.0-or-later
 
 Summary: A set of predicates and assertions for checking the properties of code. This is mainly for use by other package developers who want to include run-time testing features in their own packages. End-users will usually want to use assertive directly.
 
